@@ -71,7 +71,8 @@ The reconnaissance phase of a penetration test is possibly the most important ph
     Sunnyvale, CA
 
   2. What is the NetRange IP address? 
-  3.  
+  3.  ![image](https://user-images.githubusercontent.com/93744925/161836777-8d0053f8-f485-44a4-b3c5-357e8f385f8f.png)
+
 
   3. What is the company they use to store their infrastructure? 
 
