@@ -100,12 +100,17 @@ Using Shodan and the information gathered from Google Dorking, find any other us
 Altoro Mutual is also concerned about cross-site scripting attacks, which can cause havoc on their website. Verify whether or not Altoro Mutual is vulnerable to XSS by completing the following:
 
 - Install the Recon module `xssed`. Run the commands:
-     -marketplace search xssed
-     -marketplace install recon/domains-vulnerabilities/xssed
-     -modules load recon/domains/vulnerabilities/xssed
- 
+     - marketplace search xssed
+     - marketplace install recon/domains-vulnerabilities/xssed
+     - modules load recon/domains/vulnerabilities/xssed
+   
+  ![image](https://user-images.githubusercontent.com/93744925/161839474-02e0da8c-0c8f-48f7-a4a2-2df5935084b5.png)
+
 - Set the source to `demo.testfire.net`. 
-- Run the module. 
+  - Run the command: info
+  - Run the command: options set SOURCE demo.testfire.net to set the source
+- Run the module.
+  - Run the command: run  
 
 Is Altoro Mutual vulnerable to XSS?
 
