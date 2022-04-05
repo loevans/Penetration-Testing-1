@@ -132,7 +132,8 @@ Your client has asked that you help identify any vulnerabilities with their file
     
 - Use Zenmap's scripting engine to identify a vulnerability associated with the service running on the 139/445 port from your previous scan.
   - namp -T4 -F --script ftp-vsftpd-backdoor,smb-enum-shares 192.168.0.10
-  
+  ![image](https://user-images.githubusercontent.com/93744925/161841335-d7416df0-4738-4ea3-ace9-a212518e7be9.png)
+
   ![image](https://user-images.githubusercontent.com/93744925/161841234-976e4381-4551-420d-bc33-859dd0607dee.png)
 
 
