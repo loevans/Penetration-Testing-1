@@ -132,6 +132,9 @@ Your client has asked that you help identify any vulnerabilities with their file
     
 - Use Zenmap's scripting engine to identify a vulnerability associated with the service running on the 139/445 port from your previous scan.
   - namp -T4 -F --script ftp-vsftpd-backdoor,smb-enum-shares 192.168.0.10
+  
+  ![image](https://user-images.githubusercontent.com/93744925/161841234-976e4381-4551-420d-bc33-859dd0607dee.png)
+
 
 - Once you have identified this vulnerability, answer the following questions for your client:
   1. What is the vulnerability? CVE-2011-2523:Zenmap was able to enumerate the vulnerable service running on port 21.  
