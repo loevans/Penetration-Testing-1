@@ -113,6 +113,8 @@ Altoro Mutual is also concerned about cross-site scripting attacks, which can ca
 
 - Run the module.
   - Run the command: run  
+![image](https://user-images.githubusercontent.com/93744925/161840263-48d671a7-945a-452e-a151-48a5f0c325a5.png)
+
 
 Is Altoro Mutual vulnerable to XSS?
 
