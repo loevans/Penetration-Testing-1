@@ -113,28 +113,30 @@ Altoro Mutual is also concerned about cross-site scripting attacks, which can ca
 
 - Run the module.
   - Run the command: run  
-![image](https://user-images.githubusercontent.com/93744925/161840263-48d671a7-945a-452e-a151-48a5f0c325a5.png)
+![image](https://user-images.githubusercontent.com/93744925/161840435-9f31013b-f8bf-4c84-bd19-07a2b7d64ad6.png)
 
 
-Is Altoro Mutual vulnerable to XSS?
+Is Altoro Mutual vulnerable to XSS? YES, there is 1 total vulnerability found.
 
 ### Step 5: Zenmap
 
 Your client has asked that you help identify any vulnerabilities with their file-sharing server. Using the Metasploitable machine to act as your client's server, complete the following:
 
-- Use Zenmap to run a service scan against the Metasploitable machine. 
+- Use Zenmap to run a service scan against the Metasploitable machine.
+  - namp -T4 -F 192.168.0.10
+   
   
   - **Bonus:** In the same command, output the results into a new text file named `zenmapscan.txt`. 
+    - namp -T4 -F -oN zenmapscan.txt 192.168.0.10 
 
     
 - Use Zenmap's scripting engine to identify a vulnerability associated with the service running on the 139/445 port from your previous scan.
-
+  - namp -T4 -F --script ftp-vsftpd-backdoor,smb-enum-shares 192.168.0.10
 
 - Once you have identified this vulnerability, answer the following questions for your client:
-  1. What is the vulnerability? 
-  2. Why is it dangerous? 
-  3. What are your recommendations for the client to protect their server? 
-
+  1. What is the vulnerability? CVE-2011-2523:Zenmap was able to enumerate the vulnerable service running on port 21.  
+  2. Why is it dangerous? The vsftpd v2.3.4 is vulnerable to a backdoor command execution, whcih present a threat to running this particular version of software. Successful execution of this vulnerability results in opening the backdoor port 6200 of the system and running as root.
+  4. What are your recommendations for the client to protect their server? I recommmend constant monitoring and updating with the patch for vsfptd 2.3.4.  The vsFPTD 2.3.4 patch was released on July 3, 2011.
 ---
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  
 
