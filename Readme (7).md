@@ -109,6 +109,8 @@ Altoro Mutual is also concerned about cross-site scripting attacks, which can ca
 - Set the source to `demo.testfire.net`. 
   - Run the command: info
   - Run the command: options set SOURCE demo.testfire.net to set the source
+![image](https://user-images.githubusercontent.com/93744925/161840132-ff09c627-c225-4db4-b2c8-d5d344b0b371.png)
+
 - Run the module.
   - Run the command: run  
 
