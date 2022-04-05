@@ -91,12 +91,18 @@ Using Shodan and the information gathered from Google Dorking, find any other us
 
   - What open ports and running services did Shodan find? 
    -Ports: 80, 443, 8080 https://www.shodan.io/host/65.61.137.117 
+   
+![image](https://user-images.githubusercontent.com/93744925/161837776-4d770163-e72c-40b6-8654-2b142483f771.png)
 
 #### Step 4: Recon-ng
 
 Altoro Mutual is also concerned about cross-site scripting attacks, which can cause havoc on their website. Verify whether or not Altoro Mutual is vulnerable to XSS by completing the following:
 
-- Install the Recon module `xssed`. 
+- Install the Recon module `xssed`. Run the commands:
+     -marketplace search xssed
+     -marketplace install recon/domains-vulnerabilities/xssed
+     -modules load recon/domains/vulnerabilities/xssed
+ 
 - Set the source to `demo.testfire.net`. 
 - Run the module. 
 
