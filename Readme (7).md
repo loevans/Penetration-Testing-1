@@ -54,9 +54,10 @@ As you complete the steps below, please record your answers in the [Submission.m
 Altoro Mutual wants to ensure that private information that is unavailable on their public website cannot be found by searching the web. 
 
 - For example, Altoro Mutual does not mention their executive remembers on the website. Using Google, can you identify who the Chief Executive Officer?
+  - Karl Fitzgerald
 
 - How can this information be helpful to an attacker?
-
+  - This information can be usefule to an attacker dur to being able to perform social engineering attacks, ie., email phishing, directly to the CEO and other executives.
 
 #### Step 2: DNS and Domain Discovery
 
@@ -67,8 +68,10 @@ The reconnaissance phase of a penetration test is possibly the most important ph
 - Enter the IP address for `demo.testfire.net` into Domain Dossier and answer the following questions based on the results:
 
   1. Where is the company located? 
+    Sunnyvale, CA
 
-  2. What is the NetRange IP address?  
+  2. What is the NetRange IP address? 
+  3.  
 
   3. What is the company they use to store their infrastructure? 
 
