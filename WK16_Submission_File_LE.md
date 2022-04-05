@@ -1,26 +1,10 @@
-## Week 16 Homework: Penetration Testing 1
-
-### Scenario
-
-In this assignment, you will work as a recently hired security analyst at Altoro Mutual, a banking service. 
-
- - Concerned about their online presence and the security of their website demo.testfire.net, they have hired you to evaluate the security posture of their operations. 
- 
- - As a holder very sensitive customer and financial data, Altoro Mutual is worried malicious actors compromising their website anf gaining this information. 
-
-You are tasked with performing website enumeration, discovery, and vulnerability detection. Because this engagement is non-invasive, you will **not** try to hack into their system. Rather, you will discover any potential vulnerabilities or leaks that the company should be worried about. 
-
-
-#### Lab Environment
-
-You will use Azure online VMs to complete the homework. 
-
+## Week 16 Homework Subission File: Penetration Testing 1
 
 #### Step 1: Google Dorking
 
 Altoro Mutual wants to ensure that private information that is unavailable on their public website cannot be found by searching the web. 
 
-- For example, Altoro Mutual does not mention their executive remembers on the website. Using Google, can you identify who the Chief Executive Officer?
+- Using Google, can you identify who the Chief Executive Officer?
   - Karl Fitzgerald
   ![image](https://user-images.githubusercontent.com/93744925/161839236-60d93753-db6f-4bf1-acf3-dabba6751ef7.png)
 
@@ -28,10 +12,6 @@ Altoro Mutual wants to ensure that private information that is unavailable on th
   - This information can be usefule to an attacker dur to being able to perform social engineering attacks, ie., email phishing, directly to the CEO and other executives.
 
 #### Step 2: DNS and Domain Discovery
-
-The reconnaissance phase of a penetration test is possibly the most important phase of the engagement. Without a clear understanding of your client's assets, vulnerabilities can go unnoticed and later exploited. 
-
-- Navigate to `centralops.net`. 
 
 - Enter the IP address for `demo.testfire.net` into Domain Dossier and answer the following questions based on the results:
 
@@ -51,20 +31,12 @@ The reconnaissance phase of a penetration test is possibly the most important ph
 
 #### Step 3: Shodan
 
-Using Shodan and the information gathered from Google Dorking, find any other useful information that can be used in an attack.
-
-- Navigate to [shodan.io](https://www.shodan.io/). 
-
-- Run a scan against the IP address of the DNS server for `demo.testfire.net`. 
-
   - What open ports and running services did Shodan find? 
    -Ports: 80, 443, 8080 https://www.shodan.io/host/65.61.137.117 
    
 ![image](https://user-images.githubusercontent.com/93744925/161837776-4d770163-e72c-40b6-8654-2b142483f771.png)
 
 #### Step 4: Recon-ng
-
-Altoro Mutual is also concerned about cross-site scripting attacks, which can cause havoc on their website. Verify whether or not Altoro Mutual is vulnerable to XSS by completing the following:
 
 - Install the Recon module `xssed`. Run the commands:
      - marketplace search xssed
@@ -82,7 +54,6 @@ Altoro Mutual is also concerned about cross-site scripting attacks, which can ca
   - Run the command: run  
 ![image](https://user-images.githubusercontent.com/93744925/161840435-9f31013b-f8bf-4c84-bd19-07a2b7d64ad6.png)
 
-
 Is Altoro Mutual vulnerable to XSS? YES, there is 1 total vulnerability found.
 
 ### Step 5: Zenmap
@@ -93,12 +64,12 @@ Your client has asked that you help identify any vulnerabilities with their file
   - namp -T4 -F 192.168.0.10
    
   
-  - **Bonus:** In the same command, output the results into a new text file named `zenmapscan.txt`. 
+  - Bonus command to output results into a new text file named `zenmapscan.txt`. 
     - namp -T4 -F -oN zenmapscan.txt 192.168.0.10 
 
     ![image](https://user-images.githubusercontent.com/93744925/161841485-de449cd3-c308-4da3-a1e8-15dfc80bf0e8.png)
 
-- Use Zenmap's scripting engine to identify a vulnerability associated with the service running on the 139/445 port from your previous scan.
+- Zenmap vulnerability script command:
   - namp -T4 -F --script ftp-vsftpd-backdoor,smb-enum-shares 192.168.0.10
   ![image](https://user-images.githubusercontent.com/93744925/161841335-d7416df0-4738-4ea3-ace9-a212518e7be9.png)
 
