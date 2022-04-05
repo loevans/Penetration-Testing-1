@@ -55,6 +55,7 @@ Altoro Mutual wants to ensure that private information that is unavailable on th
 
 - For example, Altoro Mutual does not mention their executive remembers on the website. Using Google, can you identify who the Chief Executive Officer?
   - Karl Fitzgerald
+  ![image](https://user-images.githubusercontent.com/93744925/161839236-60d93753-db6f-4bf1-acf3-dabba6751ef7.png)
 
 - How can this information be helpful to an attacker?
   - This information can be usefule to an attacker dur to being able to perform social engineering attacks, ie., email phishing, directly to the CEO and other executives.
