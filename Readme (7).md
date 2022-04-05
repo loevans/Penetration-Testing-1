@@ -71,12 +71,15 @@ The reconnaissance phase of a penetration test is possibly the most important ph
     Sunnyvale, CA
 
   2. What is the NetRange IP address? 
-  3.  ![image](https://user-images.githubusercontent.com/93744925/161836777-8d0053f8-f485-44a4-b3c5-357e8f385f8f.png)
+    65.61.137.64 - 65.61.137.127
 
+![image](https://user-images.githubusercontent.com/93744925/161836947-c84d2689-5bca-4f45-9f85-1482064f928c.png)
 
   3. What is the company they use to store their infrastructure? 
-
+  Rackspace Backbone Engineering
+  
   4. What is the IP address of the DNS server? 
+  65.61.137.117
 
 #### Step 3: Shodan
 
@@ -87,6 +90,7 @@ Using Shodan and the information gathered from Google Dorking, find any other us
 - Run a scan against the IP address of the DNS server for `demo.testfire.net`. 
 
   - What open ports and running services did Shodan find? 
+   -Ports: 80, 443, 8080 https://www.shodan.io/host/65.61.137.117 
 
 #### Step 4: Recon-ng
 
