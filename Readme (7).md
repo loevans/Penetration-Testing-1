@@ -10,44 +10,11 @@ In this assignment, you will work as a recently hired security analyst at Altoro
 
 You are tasked with performing website enumeration, discovery, and vulnerability detection. Because this engagement is non-invasive, you will **not** try to hack into their system. Rather, you will discover any potential vulnerabilities or leaks that the company should be worried about. 
 
-Please note throughout this assignment, you will target a website named "Altoro Mutual" located at `demo.testfire.net`. Altoro Mutual was designed by IBM, a company that designs both hardware and software for computers. Their website `demo.testfire.net` was specifically designed to detect web application vulnerabilities.
-
-
-### Topics Covered in This Assignment
-
-- Website enumeration
-- Google Dorking
-- OSINT Recon
-- Shodan
-- Recon-NG
-- Installing modules
-- Zenmap
-- nmap's scripting engine
 
 #### Lab Environment
 
 You will use Azure online VMs to complete the homework. 
 
-To start the labs, log into Azure and launch the Penetration Security machine.
-
-Once you are connected to that machine, launch the Pen Testing Hyper-V machine and start it to boot up Kali Linux.
-
-- Kali credentials:
-  - Username: `root`
-  - Password: `toor`
-  
-- Metasploitable credentials:
-  - Username: `msfadmin`
-  - Password: `msfadmin`
-
-**Note:** Your Kali machine will act as the attacker machine, and the Metasploitable machine will act as the victims machine. 
-
-Please note throughout this assignment, you will target a website named "Altoro Mutual" located at `demo.testfire.net`. Altoro Mutual was designed by IBM, a company that designs both hardware and software for computers. Their website `demo.testfire.net` was specifically designed to detect web application vulnerabilities.
-
-
-### Instructions:
-
-As you complete the steps below, please record your answers in the [Submission.md file](SubmissionFile.md). You will submit this file as your homework deliverable.
 
 #### Step 1: Google Dorking
 
@@ -142,6 +109,8 @@ Your client has asked that you help identify any vulnerabilities with their file
   1. What is the vulnerability? CVE-2011-2523:Zenmap was able to enumerate the vulnerable service running on port 21.  
   2. Why is it dangerous? The vsftpd v2.3.4 is vulnerable to a backdoor command execution, whcih present a threat to running this particular version of software. Successful execution of this vulnerability results in opening the backdoor port 6200 of the system and running as root.
   4. What are your recommendations for the client to protect their server? I recommmend constant monitoring and updating with the patch for vsfptd 2.3.4.  The vsFPTD 2.3.4 patch was released on July 3, 2011.
+  ![image](https://user-images.githubusercontent.com/93744925/161841682-11e3d049-c438-461f-8109-76c263015b2b.png)
+
 ---
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  
 
